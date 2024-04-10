@@ -1,0 +1,13 @@
+# Программа для копирования файлов
+
+filename = input('Backup какого файла необходимо сделать?: ')
+filename_backup = 'backup_' + filename
+file1 = open(filename, 'rb') #открываем файл для чтения (который копируем)
+file2 = open(filename_backup, 'wb') #открыаем файл для записи (в который копируем)
+
+file2.write(file1.read()) # записываем данные Копируемого файла в новый файл
+
+file1.close()
+file2.close()
+
+print('Backup успешно завершен!')
